@@ -1,3 +1,4 @@
+from aritmetica import Aritmetica
 from persona import Persona
 
 if __name__ == '__main__':
@@ -13,3 +14,18 @@ if __name__ == '__main__':
         print("Los objetos son iguales")
     else:
         print("Los objetos son diferentes")
+
+
+    aritmetica1 = Aritmetica(5,7)
+    aritmetica1.sumar()
+    aritmetica1.restar()
+    aritmetica1.multiplicar()
+    aritmetica1.dividir()
+
+    aritmetica2 = Aritmetica(12,16)
+    aritmetica2.sumar()
+    aritmetica2.restar()
+    aritmetica2.multiplicar()
+    aritmetica2.dividir()
+
+
