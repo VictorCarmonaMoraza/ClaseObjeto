@@ -1,6 +1,6 @@
 class Aritmetica:
 
-    def __init__(self, operando1, operando2):
+    def __init__(self, operando1=None, operando2=None):
         self.operando1 = operando1
         self.operando2 = operando2
 

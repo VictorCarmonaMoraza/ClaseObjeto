@@ -28,4 +28,13 @@ if __name__ == '__main__':
     aritmetica2.multiplicar()
     aritmetica2.dividir()
 
+    aritmetica3 = Aritmetica()
+    aritmetica4  = Aritmetica(1)
+    aritmetica4.operando2=3
+    aritmetica4.sumar()
+
+    aritmetica5 = Aritmetica(operando1=10,operando2=5)
+    aritmetica5.sumar()
+
+
 
