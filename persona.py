@@ -2,8 +2,8 @@
 
 class Persona:
 
-    def inicializar_persona(self, nombre, apellido):
-        # Creamos los atributos de la clase
+    # Constructor
+    def __init__(self, nombre, apellido):
         self.nombre = nombre
         self.apellido = apellido
 
