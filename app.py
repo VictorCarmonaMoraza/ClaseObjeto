@@ -1,4 +1,5 @@
 from aritmetica import Aritmetica
+from coche import Coche
 from persona import Persona
 
 if __name__ == '__main__':
@@ -36,5 +37,13 @@ if __name__ == '__main__':
     aritmetica5 = Aritmetica(operando1=10,operando2=5)
     aritmetica5.sumar()
 
-
+    ##Encapsulamiento
+    coche = Coche("Toyota", "Corolla", "Rojo")
+    coche.get_color()
+    coche.marca ="Honda"
+    coche._modelo = "Civic"
+    ##Esto es mala practica
+    coche._Coche__color = "Verde"  # Acceso directo al atributo privado (no recomendado)
+    coche.get_color()
+    coche.conducir()
 
