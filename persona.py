@@ -12,3 +12,5 @@ class Persona:
     Nombre: {self.nombre}
     Apellido: {self.apellido}
     """)
+        print(f"La direcccion de memoria es: {id(self)}")
+        print(f"La direccion de memoria es: {hex(id(self))}")
