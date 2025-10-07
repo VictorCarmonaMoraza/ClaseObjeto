@@ -39,11 +39,5 @@ if __name__ == '__main__':
 
     ##Encapsulamiento
     coche = Coche("Toyota", "Corolla", "Rojo")
-    coche.get_color()
-    coche.marca ="Honda"
-    coche._modelo = "Civic"
-    ##Esto es mala practica
-    coche._Coche__color = "Verde"  # Acceso directo al atributo privado (no recomendado)
-    coche.get_color()
     coche.conducir()
 

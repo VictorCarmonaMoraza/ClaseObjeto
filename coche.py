@@ -1,41 +1,33 @@
 class Coche:
     def __init__(self, marca, modelo, color):
-        self.marca = marca  ##Atruibuto publico
+        self._marca = marca  # Atributo protegido
         self._modelo = modelo  # Atributo protegido
-        self.__color = color  # Atributo privado
+        self._color = color  # Atributo protegido
 
     def conducir(self):
-        print(f"El coche {self.marca} y {self._modelo} de color {self.__color} esta en movimiento")
+        print(f'''Conduciendo el coche:
+        Marca: {self._marca}
+        Modelo: {self._modelo}
+        Color: {self._color}''')
 
-    # --- Getter para color (acceso controlado al atributo privado) ---
-    def get_color(self):
-        return print(self.__color)
+        '''Marca: {self.get_marca()}
+        Modelo: {self.get_modelo()}
+        Color: {self.get_color()}'''  ##Esto es valido pero menos eficiente
 
-    # --- Setter para color (modificar con validación si se desea) ---
-    def set_color(self, nuevo_color):
-        if isinstance(nuevo_color, str) and nuevo_color.strip():
-            self.__color = nuevo_color
-        else:
-            print("❌ Color no válido. Debe ser un texto no vacío.")
-
-    # --- Getter para color (acceso controlado al atributo privado) ---
     def get_marca(self):
-        return print(self.marca)
+        return self._marca
 
-    # --- Setter para color (modificar con validación si se desea) ---
     def set_marca(self, marca):
-        if isinstance(marca, str) and marca.strip():
-            self.marca = marca
-        else:
-            print("❌ Color no válido. Debe ser un texto no vacío.")
+        self._marca = marca
 
-    # --- Getter para color (acceso controlado al atributo privado) ---
     def get_modelo(self):
-        return print(self._modelo)
+        return self._modelo
 
-    # --- Setter para color (modificar con validación si se desea) ---
-    def set_modelo(self, nuevo_modelo):
-        if isinstance(nuevo_modelo, str) and nuevo_modelo.strip():
-            self._modelo = nuevo_modelo
-        else:
-            print("❌ Color no válido. Debe ser un texto no vacío.")
+    def set_modelo(self, modelo):
+        self._modelo = modelo
+
+    def get_color(self):
+        return self._color
+
+    def set_color(self, color):
+        self._color = color
