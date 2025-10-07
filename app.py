@@ -39,5 +39,7 @@ if __name__ == '__main__':
 
     ##Encapsulamiento
     coche = Coche("Toyota", "Corolla", "Rojo")
+    coche.marca="Mazda"
     coche.conducir()
+    print(f'Atribnuto marca coche: {coche.marca}')
 
