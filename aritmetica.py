@@ -37,3 +37,7 @@ class Aritmetica:
         if self._operando2 == 0:
             return print(f"Error: Division por cero")
         return print({self._operando1 / self._operando2})
+
+    #Metodos magicos __str__ y __repr__
+    def __str__(self):
+        return f"Aritmetica(operando1={self._operando1}, operando2={self._operando2})"
