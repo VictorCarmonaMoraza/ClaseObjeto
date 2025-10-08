@@ -30,7 +30,7 @@ if __name__ == '__main__':
 
     aritmetica3 = Aritmetica()
     aritmetica4 = Aritmetica(1)
-    aritmetica4.operando2 = 3
+    aritmetica4.set_operando2(3)
     aritmetica4.sumar()
 
     aritmetica5 = Aritmetica(operando1=10, operando2=5)
@@ -42,7 +42,7 @@ if __name__ == '__main__':
     coche.conducir()
     print(f'marca coche: {coche.marca}')
     # Intentar agreagr un nuevo atributo
-    #Si creamos un nuevo, este no tendra el nuevo atributo
+    # Si creamos un nuevo, este no tendra el nuevo atributo
     setattr(coche, 'edad_coche', '42 años')
     print(coche.edad_coche)
     ##Obtener todos los atributos de un objeto
