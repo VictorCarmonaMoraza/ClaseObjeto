@@ -1,4 +1,5 @@
 from aritmetica import Aritmetica
+from atributos_clase_instancia import Persona2
 from coche import Coche
 from persona import Persona
 
@@ -47,3 +48,21 @@ if __name__ == '__main__':
     print(coche.edad_coche)
     ##Obtener todos los atributos de un objeto
     print(coche.__dict__)
+
+
+
+    print(f'*** Atributos de clase ***')
+    print(f'Atributos de Clase Aritmetica: {Persona2.atributo_clase}')
+    # Modificamos el atributo de clase
+    Persona2.atributo_clase = 42
+    print(f'Atributos de Clase Aritmetica: {Persona2.atributo_clase}')
+
+    # Creamos el primer objeto
+    persona1 = Persona2(15)
+    print(f'Atributo de clase desde persona1: {persona1.atributo_clase}')
+    print(f'Atributo de instancia desde persona1: {persona1.atributo_instancia}')
+
+    # Creamos el segundo objeto
+    persona2 = Persona2(23)
+    print(f'Atributo de clase desde persona2: {persona2.atributo_clase}')
+    print(f'Atributo de instancia desde persona2: {persona2.atributo_instancia}')
