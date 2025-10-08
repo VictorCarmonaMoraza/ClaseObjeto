@@ -4,17 +4,24 @@ class Aritmetica:
         self._operando1 = operando1
         self._operando2 = operando2
 
-    def get_operando1(self):
+
+    @property
+    def operando1(self):
         return self._operando1
 
-    def set_operando1(self, operando1):
+    @operando1.setter
+    def operando1(self, operando1):
         self._operando1 = operando1
 
-    def get_operando2(self):
+
+    @property
+    def operando2(self):
         return self._operando2
 
-    def set_operando2(self, operando2):
+    @operando2.setter
+    def operando2(self, operando2):
         self._operando2 = operando2
+
 
     def sumar(self):
         return print(f"{self._operando1 + self._operando2}")
