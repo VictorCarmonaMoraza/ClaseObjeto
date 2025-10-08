@@ -16,30 +16,34 @@ if __name__ == '__main__':
     else:
         print("Los objetos son diferentes")
 
-
-    aritmetica1 = Aritmetica(5,7)
+    aritmetica1 = Aritmetica(5, 7)
     aritmetica1.sumar()
     aritmetica1.restar()
     aritmetica1.multiplicar()
     aritmetica1.dividir()
 
-    aritmetica2 = Aritmetica(12,16)
+    aritmetica2 = Aritmetica(12, 16)
     aritmetica2.sumar()
     aritmetica2.restar()
     aritmetica2.multiplicar()
     aritmetica2.dividir()
 
     aritmetica3 = Aritmetica()
-    aritmetica4  = Aritmetica(1)
-    aritmetica4.operando2=3
+    aritmetica4 = Aritmetica(1)
+    aritmetica4.operando2 = 3
     aritmetica4.sumar()
 
-    aritmetica5 = Aritmetica(operando1=10,operando2=5)
+    aritmetica5 = Aritmetica(operando1=10, operando2=5)
     aritmetica5.sumar()
 
     ##Encapsulamiento
     coche = Coche("Toyota", "Corolla", "Rojo")
-    coche.marca="Mazda"
+    coche.marca = "Mazda"
     coche.conducir()
-    print(f'Atribnuto marca coche: {coche.marca}')
-
+    print(f'marca coche: {coche.marca}')
+    # Intentar agreagr un nuevo atributo
+    #Si creamos un nuevo, este no tendra el nuevo atributo
+    setattr(coche, 'edad_coche', '42 años')
+    print(coche.edad_coche)
+    ##Obtener todos los atributos de un objeto
+    print(coche.__dict__)
